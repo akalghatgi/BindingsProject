@@ -180,6 +180,9 @@
     <Reference Include="AWSQLCipherBindings">
       <HintPath>..\AWFrameworkBindings\dll\AWSQLCipherBindings.dll</HintPath>
     </Reference>
+    <Reference Include="AWTunnelSDKBinding">
+      <HintPath>..\AWFrameworkBindings\dll\AWTunnelSDKBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
