@@ -1,0 +1,248 @@
+<metadata>
+
+  <attr path="/api/package[@name='com.airwatch.app']/class[@name='AWApplication']" name="extends">Android.App.Application</attr>
+    
+ <!-- <attr path="/api/package[@name='com.airwatch.app']/class[@name='AWSDKApplicationDelegate']/method[@name='getDelegate' and count(parameter)=0]" name="managedName">GetAWSDKDelegate</attr>
+  <attr path="/api/package[@name='com.airwatch.app']/class[@name='AWApplication']/method[@name='getDelegate' and count(parameter)=0]" name="managedName">GetAWSDKDelegate</attr>
+  <attr path="/api/package[@name='com.airwatch.app']/interface[@name='AWSDKApplication']/method[@name='getDelegate' and count(parameter)=0]" name="managedName">GetAWSDKDelegate</attr>
+-->
+  <attr path="/api/package[@name='com.airwatch.app']/class[@name='AWApplication']/method[@name='getAWSDKDelegate']" name="managedReturn">Com.Airwatch.App.AWSDKApplicationDelegate</attr>
+  <attr path="/api/package[@name='com.airwatch.sdk']/class[@name='SDKBaseContextService']" name="extends">Android.App.IntentService</attr>
+  <attr path="/api/package[@name='com.airwatch.keymanagement.unifiedpin.interfaces']/interface[@name='TokenChannel.Listener']/method[@name='onValidateInit' and count(parameter)=2]" name="managedName">OnTokenChannelValidateInit</attr>
+  <attr path="/api/package[@name='com.airwatch.app']/interface[@name='AWSDKApplication']/method[@name='getAWSDKDelegate']" name="managedReturn">Com.Airwatch.App.AWSDKApplicationDelegate</attr>
+    
+  <!-- Don't  need these packages for the Xamarin binding/public API -->
+  <remove-node path="/api/package[@name='android.security']" />
+  <remove-node path="/api/package[@name='com.airwatch.agent.enrollment']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='KoinModule.WhenMappings']" />
+  <remove-node path="/api/package[@name='com.airwatch.signaturevalidation']/class[@name='AnchorProviderSignatureCheck']" />
+  <remove-node path="/api/package[@name='com.airwatch.signaturevalidation']/class[@name='PackageSignatureCheckUtility']" />
+  <remove-node path="/api/package[@name='com.airwatch.mutualtls']/class[@name='ClientTLSAuthKeyManager']" />
+  <remove-node path="/api/package[@name='com.airwatch.analytics']" />
+  <remove-node path="/api/package[@name='com.airwatch.animation']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityActivity.TimeoutTask']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityFragmentActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityFragmentActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.app']/class[@name='InactivityFragmentActivity.TimeoutTask']" />
+  <remove-node path="/api/package[@name='com.airwatch.auth.napps']" />
+  <remove-node path="/api/package[@name='com.airwatch.auth.saml']" />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.beacon']/class[@name='BeaconSendThread']" /> 
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.database']" />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='AWPushMessageReceiver'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='AWPushNotificationReceiver'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='AWPushNotificationUtility'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='GCMManager'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='GCMReceiver'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.gcm']/class[@name='GCMReceiverService'] " />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.policysigning']" />
+  <remove-node path="/api/package[@name='com.airwatch.bizlib.securechannel']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning']/class[@name='ExtendedSSLSocketFactory']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.datamodel']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.handlers']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.helper']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.messages']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.repository']/interface[@name='Specifications']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.repository']/class[@name='CertListByCertificateSpec']" />
+  <remove-node path="/api/package[@name='com.airwatch.certpinning.repository']/class[@name='CertListByHostIDSpec']" />
+  <remove-node path="/api/package[@name='com.airwatch.clipboard']/class[@name='ClipboardTask']" />
+  <remove-node path="/api/package[@name='com.airwatch.clipboard']/class[@name='ClipBoardUtility']" />
+  <remove-node path="/api/package[@name='com.airwatch.clipboard']/class[@name='CopyPasteDelegate']" />
+  <remove-node path="/api/package[@name='com.airwatch.clipboard']/class[@name='CopyPasteDelegate.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.console']" />
+  <remove-node path="/api/package[@name='com.airwatch.core']" />
+  <remove-node path="/api/package[@name='com.airwatch.core.security']" />
+  <remove-node path="/api/package[@name='com.airwatch.core.task']" />
+  <remove-node path="/api/package[@name='com.airwatch.core.compliance']/class[@name='AWCompliancePolicies']" />
+  <remove-node path="/api/package[@name='com.airwatch.core.compliance']/class[@name='ComplianceReportMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.crypto.openssl']/class[@name='OpenSSLCryptUtil']" />
+  <remove-node path="/api/package[@name='com.airwatch.crypto.util']" />
+  <remove-node path="/api/package[@name='com.airwatch.datasampling']" />
+  <remove-node path="/api/package[@name='com.airwatch.db']" />
+  <remove-node path="/api/package[@name='com.airwatch.debug']" />
+  <remove-node path="/api/package[@name='com.airwatch.exception']" />
+  <remove-node path="/api/package[@name='com.airwatch.executor.priority']" />
+  <remove-node path="/api/package[@name='com.airwatch.feedback']" />
+  <remove-node path="/api/package[@name='com.airwatch.gateway.cert']" />
+  <remove-node path="/api/package[@name='com.airwatch.gateway']/class[@name='ConsoleVersion']" />
+  <remove-node path="/api/package[@name='com.airwatch.geofencing']" />
+  <remove-node path="/api/package[@name='com.airwatch.interrogator']" />
+  <remove-node path="/api/package[@name='com.airwatch.io']" />
+  <remove-node path="/api/package[@name='com.airwatch.apteligent']/class[@name='AWApteligentService']" />
+  <remove-node path="/api/package[@name='com.airwatch.keymanagement.context']" />
+  <remove-node path="/api/package[@name='com.airwatch.keymanagement.unifiedpin']/class[@name='TokenRotation']" />
+  <remove-node path="/api/package[@name='com.airwatch.keymanagement.unifiedpin.escrow']/class[@name='FetchEscrowedKeyMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.keymanagement.unifiedpin.task']" />
+  <remove-node path="/api/package[@name='com.airwatch.keymanagement.unifiedpin.token']/class[@name='HardwareBackedTokenStorage']" />
+  <remove-node path="/api/package[@name='com.airwatch.lang']" />
+  <remove-node path="/api/package[@name='com.airwatch.log']" />
+  <remove-node path="/api/package[@name='com.airwatch.log.eventreporting']" />
+  <remove-node path="/api/package[@name='com.airwatch.log.rollinglogs']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='AirwatchDeviceWrapper']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='AuthenticationRequest']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='AuthenticationResponse']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='AuthenticationResponse.AuthenticationResponseParser']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/interface[@name='AuthenticationType']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='LoginUtility']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/interface[@name='OnActionCompleteListener']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='SDKAppAuthenticator']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='SDKBasePreferenceActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='SDKLoginSettingsHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='SDKPasscodePolicy']" />
+  <remove-node path="/api/package[@name='com.airwatch.login']/class[@name='TimeChangeReceiver']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.branding']/class[@name='BrandingConfiguration']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.branding']/class[@name='DefaultBrandingManager']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.branding']/class[@name='DefaultBrandingManager.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.branding']/class[@name='ImageDownloadMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.branding']/class[@name='ImageDownloadRunnable']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.fingerprint']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.net']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.schedular']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.tasks']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.timeout']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/interface[@name='ISDKStateDependentActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKAuthBaseActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKAuthBaseActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKAuthBaseActivity.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKAuthenticationActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEmailValidationActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEmailValidationActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEmailValidationActivity.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEulaActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEulaActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKEulaActivity.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKLoginBaseActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKLoginBaseActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKPasscodeActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKPasscodeActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKServerURLActivity']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKServerURLActivity.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKServerURLActivity.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.activity']/class[@name='SDKServerURLActivity.3']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.fragments']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.models']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.presenters']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.presenters.api']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings.accountsettings']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings.message']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings.model']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings.supportsettings']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.settings.views']" />
+  <remove-node path="/api/package[@name='com.airwatch.login.ui.views']" />
+  <remove-node path="/api/package[@name='com.airwatch.net']/class[@name='AnalyticsCredentialTokenMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.net']/class[@name='AWSSLSocketFactory']" />
+  <remove-node path="/api/package[@name='com.airwatch.net']/class[@name='BaseStagingMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.net']/class[@name='HttpPostMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.net']/class[@name='HttpPutMessage']" />  
+  <remove-node path="/api/package[@name='com.airwatch.net.securechannel']" />
+  <remove-node path="/api/package[@name='com.airwatch.permission']" />
+  <remove-node path="/api/package[@name='com.airwatch.plist']" />
+  <remove-node path="/api/package[@name='com.airwatch.profile']" />
+  <remove-node path="/api/package[@name='com.airwatch.qrcode']" />
+  <remove-node path="/api/package[@name='com.airwatch.qrcode.ui']" />
+  <remove-node path="/api/package[@name='com.airwatch.safetynet']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.aidl.oem']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.appsmonitor']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.certificate']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='AppConfigurationImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='ComplianceSettingsMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='AppSettingsProvider']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='BaseConfigurationImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='BaseConfigurationImpl.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='BaseConfigurationImpl.SettingsParser']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='DefaultSettingsExtension']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SDKConfigurationImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SDKConfigurationImpl.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SDKSettingsFetchTask']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SettingsMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SettingsProvider']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.configuration']/class[@name='SettingsSecureMessage']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.awsdkcontext.handlers']/class[@name='UserInputInitValidationHandler']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.awsdkcontext.handlers']/class[@name='UserInputRotationHandler']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.awsdkcontext.handlers.anchor']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.awsdkcontext.handlers.standalone']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.state.processor']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context.state']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='DefaultSDKContextFactory']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/interface[@name='ISdkFetchSettingsListener']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKBeaconSampler']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKBeaconSampler.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKBeaconSampler.1.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKBeaconSampler.1.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKCommandsFetchHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKCommandsFetchHelper.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKCommandsFetchHelper.1.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKContextImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKContextImpl.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKContextImpl.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKContextImpl.3']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKFetchSettingsHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKFetchSettingsHelper.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='SDKFetchSettingsHelper.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='CredentialSecurePrefEditor']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk']/class[@name='AirWatchSDKServiceIntentHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk']/class[@name='AppInfoReader']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk']/class[@name='NetworkConnectionHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk']/class[@name='NetworkConnectionHelper.NetworkStateReceiver']" />
+  <remove-node path="/api/package[@name='com.airwatch.search.core']" />
+  <remove-node path="/api/package[@name='com.airwatch.search.ui.adapter']" />
+  <remove-node path="/api/package[@name='com.airwatch.search.ui.anim']" />
+  <remove-node path="/api/package[@name='com.airwatch.search.ui']" />
+  <remove-node path="/api/package[@name='com.airwatch.search.util']" />
+  <remove-node path="/api/package[@name='com.airwatch.search']" />
+  <remove-node path="/api/package[@name='com.airwatch.serialexecutor']" />
+  <remove-node path="/api/package[@name='com.airwatch.shareddevice']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage.databases']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage.schema']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.context']/class[@name='CredentialSecurePreferences']" />
+  <remove-node path="/api/package[@name='com.airwatch.revocationcheck']/class[@name='RevocationCheckResponse']" />
+  <remove-node path="/api/package[@name='com.airwatch.sdk.p2p']" />
+ 
+  <!--<remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='AppSecurePreferencesImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='AWFileProvider']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='BaseContent']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='CredentialSecurePreferences']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='DefaultSDKKeyStore']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='DefaultSDKKeyStore.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='PreferenceDBOperation']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/interface[@name='PreferenceErrorListener']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='PreferenceErrorListener.PreferenceErrorCode']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='PreferencesProvider']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SDKSecurePreferencesImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecureAndSharedPrefEditor']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecurePreferenceEditor']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecurePreferenceEditor.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/interface[@name='SecurePreferences']/method[@name='getAll' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/interface[@name='SecurePreferences']/method[@name='mergeEditorOperations' and count(parameter)=1]" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecurePreferencesImpl']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecurePreferencesImpl.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SecurePreferencesImpl.2']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionData']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionDataStorage']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionDataStorage.1']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionDataStorageService']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionDataStorageService.Callback']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SessionDataStorageWorkerService']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SqlCipherDatabaseHelper']" />
+  <remove-node path="/api/package[@name='com.airwatch.storage']/class[@name='SqlCipherDatabaseHelper.1']" />-->
+  
+  <remove-node path="/api/package[@name='com.airwatch.task']/class[@name='ThrottleTask']" />
+  <remove-node path="/api/package[@name='com.airwatch.ui.activity']" />
+  <remove-node path="/api/package[@name='com.airwatch.ui.fragments']" />
+  <remove-node path="/api/package[@name='com.airwatch.ui.fragments.legal']" />
+  <remove-node path="/api/package[@name='com.airwatch.util']" />
+  <remove-node path="/api/package[@name='com.airwatch.xml']" />
+  <remove-node path="/api/package[@name='jjjjjj']" />
+    
+  <!--
+  <attr path="/api/package[@name='com.airwatch.storage']/class[@name='PreferenceEditorOperation']"
+        name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airwatch.storage']/interface[@name='SecurePreferences']/method[@name='getAll' and count(parameter)=0]"
+        name="return">java.util.Map&lt;java.lang.String, ?&gt;</attr>
+  
+  <attr path="/api/package[@name='com.airwatch.login.ui.settings.supportsettings']/class[@name='SupportSettings']" name="managedName">SupportSettingsFragment</attr>
+  -->
+  
+</metadata>
